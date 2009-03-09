@@ -36,3 +36,5 @@ to
 {{{
 scopes[i].addData(vals[i+6]);
 }}}
+
+If this seems confusing, I will make some example configurations, for different things that I can imagine being useful.
