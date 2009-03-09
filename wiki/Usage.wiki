@@ -9,4 +9,29 @@ To set the number of scopes, in the example patch, find the line that reads
 {{{
 Scope[] scopes = new Scope[6];
 }}}
-and change 6 to how many ever you want.  The arduino patch included sends the 6 analog ports on the first 6 places, and most of the digital pins, after that.
+and change 6 to how many ever you want.  The arduino patch included sends the 6 analog ports on the first 6 places, and 12 digital pins, after that (2-13, all but 0 & 1 - serial)
+
+If you wanted an all digital scope, for example, you could do this:
+{{{
+Scope[] scopes = new Scope[12];
+}}}
+
+in setup() set the ranges, in the loop over scopes:
+{{{
+// find this:
+scopes[i] = new Scope(posv, dimv, color((int)random(255), (int)random(127)+127, 255));
+
+// set range to something more useful:
+scopes[i].multiplier = 1.0f;
+scopes[i].resolution = 1/0f;
+
+}}}
+
+and in draw() function, change:
+{{{
+scopes[i].addData(vals[i]);
+}}}
+to
+{{{
+scopes[i].addData(vals[i+6]);
+}}}
