@@ -1,7 +1,12 @@
-#Using arduinoscope
+=Using arduinoscope=
 
 Arduinoscope is very much a DIY sort of tool.  It makes it easy to set it up however is useful.  The included processing patch is just a simple example of using the Scope class, and can be used a lot of different ways.
 
 Here is what it looks like reading 6 analog inputs:
 <img src="http://arduinoscope.googlecode.com/files/Screenshot-Oscilliscope.png"/>
 
+To set the number of scopes, in the example patch, find the line that reads
+{{{
+Scope[] scopes = new Scope[6];
+}}}
+and change 6 to how many ever you want.  The arduino patch included sends the 6 analog ports on the first 6 places, and most of the digital pins, after that.
