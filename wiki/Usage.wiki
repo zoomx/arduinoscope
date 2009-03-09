@@ -1,3 +1,4 @@
+#labels Featured,Phase-Deploy
 =Using arduinoscope=
 
 Arduinoscope is very much a DIY sort of tool.  It makes it easy to set it up however is useful.  The included processing patch is just a simple example of using the Scope class, and can be used a lot of different ways.
@@ -23,7 +24,7 @@ scopes[i] = new Scope(posv, dimv, color((int)random(255), (int)random(127)+127, 
 
 // set range to something more useful:
 scopes[i].multiplier = 1.0f;
-scopes[i].resolution = 1/0f;
+scopes[i].resolution = 1.0f;
 
 }}}
 
