@@ -1,0 +1,7 @@
+#Using arduinoscope
+
+Arduinoscope is very much a DIY sort of tool.  It makes it easy to set it up however is useful.  The included processing patch is just a simple example of using the Scope class, and can be used a lot of different ways.
+
+Here is what it looks like reading 6 analog inputs:
+<img src="http://arduinoscope.googlecode.com/files/Screenshot-Oscilliscope.png"/>
+
