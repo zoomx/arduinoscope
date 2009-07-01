@@ -37,4 +37,12 @@ to
 scopes[i].addData(vals[i+6]);
 }}}
 
+==Higher samplerates==
+The arduino isn't really designed to be accurate at very high sample-rates (200khz recommended ADC clock rate in specs.) Also, processing probably doesn't run fast enough on your computer to really keep up with it.
+
+That being said, check out [http://gabuku.com/scope/ this project]. gabebear has some good ideas about a more efficient serial data format, that has a sort of error-correction, which might be a nice thing to add to your own processing+arduino patch.
+
+See [http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1208715493/11 this] for ideas on getting the arduino to read analog faster. Once you start getting up into super-high numbers, you probably should be using a DSP, or something, though.
+
+
 If this seems confusing, I will make some example configurations, for different things that I can imagine being useful.
