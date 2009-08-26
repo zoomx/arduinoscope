@@ -3,6 +3,10 @@
 
 Arduinoscope is very much a DIY sort of tool.  It makes it easy to set it up however is useful.  The included processing patch is just a simple example of using the Scope class, and can be used a lot of different ways.
 
+To get started with it, extract [http://arduinoscope.googlecode.com/files/arduinoscope.zip the processing lib] into your sketch library dir, in a folder called "arduinoscope", or whatever you want.
+
+You can use the included SimpleSerialArduinoscope example (in processing - Sketchbook/libraries/arduinoscope/examples) it requires you to load [http://code.google.com/p/arduinoscope/source/browse/trunk/arduino_oscilliscope.pde the arduino patch] onto your arduino.
+
 Here is what it looks like reading 6 analog inputs:
 <img src="http://arduinoscope.googlecode.com/files/Screenshot-Oscilliscope.png"/>
 
