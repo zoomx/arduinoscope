@@ -8,19 +8,19 @@ Here is what it looks like reading 6 analog inputs:
 
 To set the number of scopes, in the example patch, find the line that reads
 {{{
-Scope[] scopes = new Scope[6];
+Oscilloscope[] scopes = new Oscilloscope[6];
 }}}
-and change 6 to how many ever you want.  The arduino patch included sends the 6 analog ports on the first 6 places, and 12 digital pins, after that (2-13, all but 0 & 1 - serial)
+and change 6 to how many ever you want.  [http://code.google.com/p/arduinoscope/source/browse/trunk/arduino_oscilliscope.pde The arduino patch] sends the 6 analog ports on the first 6 places, and 12 digital pins, after that (2-13, all but 0 & 1 - serial)
 
 If you wanted an all digital scope, for example, you could do this:
 {{{
-Scope[] scopes = new Scope[12];
+Oscilloscope[] scopes = new Oscilloscope[12];
 }}}
 
 in setup() set the ranges, in the loop over scopes:
 {{{
 // find this:
-scopes[i] = new Scope(posv, dimv, color((int)random(255), (int)random(127)+127, 255));
+scopes[i] = new Oscilloscope(posv, dimv, color((int)random(255), (int)random(127)+127, 255));
 
 // set range to something more useful:
 scopes[i].multiplier = 1.0f;
@@ -43,6 +43,3 @@ The arduino isn't really designed to be accurate at very high sample-rates (200k
 That being said, check out [http://gabuku.com/scope/ this project]. gabebear has some good ideas about a more efficient serial data format, that has a sort of error-correction, which might be a nice thing to add to your own processing+arduino patch.
 
 See [http://www.arduino.cc/cgi-bin/yabb2/YaBB.pl?num=1208715493/11 this] for ideas on getting the arduino to read analog faster. Once you start getting up into super-high numbers, you probably should be using a DSP, or something, though.
-
-
-If this seems confusing, I will make some example configurations, for different things that I can imagine being useful.
