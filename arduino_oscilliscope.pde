@@ -1,3 +1,9 @@
+/*
+this goes on your arduino
+for use with Processing example SimpleSerialArduinoscope
+
+*/
+
 // holds temp vals
 int val;
 
