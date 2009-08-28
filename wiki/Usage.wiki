@@ -24,11 +24,12 @@ Oscilloscope[] scopes = new Oscilloscope[12];
 in setup() set the ranges, in the loop over scopes:
 {{{
 // find this:
-scopes[i] = new Oscilloscope(posv, dimv, color((int)random(255), (int)random(127)+127, 255));
+scopes[i] = new Oscilloscope(this, posv, dimv);
+scopes[i].setLine_color(color((int)random(255), (int)random(127)+127, 255));
 
 // set range to something more useful:
-scopes[i].multiplier = 1.0f;
-scopes[i].resolution = 1.0f;
+scopes[i].setMultiplier(1.0f);
+scopes[i].setResolution(1.0f);
 
 }}}
 
