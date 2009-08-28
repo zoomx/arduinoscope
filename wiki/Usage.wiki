@@ -3,7 +3,7 @@
 
 Arduinoscope is very much a DIY sort of tool.  It makes it easy to set it up however is useful.  The included processing patches (in examples/) will show you a few differnt ways to use the Oscilloscope class.
 
-To get started with it, extract [http://arduinoscope.googlecode.com/files/arduinoscope.zip the processing lib] into your sketch library dir, in a folder called "arduinoscope", or whatever you want.
+To get started with it, extract [http://arduinoscope.googlecode.com/files/processing-arduinoscope.zip the processing lib] into your sketch library dir, in a folder called "arduinoscope", or whatever you want.
 
 You can use the included SimpleSerialArduinoscope example (in processing - Sketchbook/libraries/arduinoscope/examples) it requires you to load [http://code.google.com/p/arduinoscope/source/browse/trunk/arduino_oscilliscope.pde the arduino patch] onto your arduino.
 
